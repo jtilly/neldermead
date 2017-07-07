@@ -7,26 +7,26 @@ This repository contains different implementations of the Nelder-Mead optimizati
 * Klein and Neira (2014) [[Paper]](http://www.cs.ucsb.edu/~kyleklein/publications/neldermead.pdf) [[C++ Code]](https://dl.dropboxusercontent.com/u/17629709/Klein_Neira_code.zip)
 
 Build and run the serial algorithm:
-```{shell}
+```sh
 # build and run a simple example
-make serial 
+make serial
 ./NelderTest.out <problem_size>
 # try a range of different objective functions
-make tests 
+make tests
 ./tests.out
 ```
 
 Build and run the parallel Lee and Wiswall implementation:
-```{shell}
+```sh
 # build and run a simple example
-make leewiswall  
+make leewiswall
 mpirun -np <num_proc> ./LeeWiswall.out <problem_size>
 ```
 
 Build and run the parallel Klein and Neira implementation (this doesn't really work):
-```{shell}
+```sh
 # build and run a simple example
-make parallel 
+make parallel
 mpirun -np <num_proc> ./DistParNelderTest.out <problem_size> <points_per_iter>
 ```
 
